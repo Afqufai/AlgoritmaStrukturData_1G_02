@@ -22,6 +22,8 @@ public class BukuMain03 {
         Buku03 bukuAfrizal = new Buku03("Nijisanji: The Black Vtuber Company", "Afrizal Qurratul Faizin", 72, 420, 25000);
         bukuAfrizal.terjual(3);
         bukuAfrizal.gantiHarga(75000);
+        int harBayar = bukuAfrizal.hitungHargaBayar(3);
         bukuAfrizal.tampilInformasi();
+        System.out.println("Harga yang harus dibayar: " + harBayar);
     }
 }

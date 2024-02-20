@@ -5,7 +5,7 @@ public class Buku03 {
     int halaman, stok, harga;
 
     public Buku03(){
-        
+
     }
 
     public Buku03(String jud, String pg, int hal, int stok, int har){
@@ -34,7 +34,32 @@ public class Buku03 {
         stok += jml;
     }
 
-    void gantiHarga(int hrg){
+    int gantiHarga(int hrg){
         harga = hrg;
+        return harga;
+    }
+
+    int hitungHargaTotal(int sold){
+        int hargaTotal = harga * sold;
+        return hargaTotal;
+    }
+
+    int hitungDiskon(int sold){
+        int hargaTotal = hitungHargaTotal(sold);
+        if (hargaTotal > 150000) {
+            return 12;
+        } else if (hargaTotal > 75000) {
+            return 5;
+        } else {
+            return 0;
+        }
+    }
+
+    int hitungHargaBayar(int sold){
+        int harga = hitungHargaTotal(sold);
+        int diskon = hitungDiskon(sold);
+
+        int hargaFinal = harga - (harga * diskon / 100);
+        return hargaFinal;
     }
 }
