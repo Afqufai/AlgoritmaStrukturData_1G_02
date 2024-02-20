@@ -18,5 +18,10 @@ public class BukuMain03 {
         Buku03 bk2 = new Buku03("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku03 bukuAfrizal = new Buku03("Nijisanji: The Black Vtuber Company", "Afrizal Qurratul Faizin", 72, 420, 25000);
+        bukuAfrizal.terjual(3);
+        bukuAfrizal.gantiHarga(75000);
+        bukuAfrizal.tampilInformasi();
     }
 }
