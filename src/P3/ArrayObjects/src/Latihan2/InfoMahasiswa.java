@@ -21,4 +21,22 @@ public class InfoMahasiswa {
         System.out.println("Jenis Kelamin: " + gender);
         System.out.println("Nilai IPK: " + ipk);
     }
+
+    public double averageIP(double[] arrIP){
+        double sum = 0;
+        for ( int i = 0; i < arrIP.length; i++) {
+            sum += arrIP[i];
+        }
+        return sum / arrIP.length;
+    }
+
+    public double ipkTertinggi(double[] arrIPK){
+        double highest = 0;
+        for (int i = 0; i < arrIPK.length; i++) {
+            if (arrIPK[i] > highest) {
+                highest = arrIPK[i];
+            }
+        }
+        return highest;
+    }
 }

@@ -7,6 +7,7 @@ public class main {
         InfoMahasiswa[] students = new InfoMahasiswa[3];
         Scanner sc03 = new Scanner(System.in);
         Scanner sc03line = new Scanner(System.in);
+        double[] arrIPK = new double[3];
 
         for (int i = 0; i < students.length; i++) {
             System.out.println("Masukkan Data Mahasiswa ke-" + (i+1));
@@ -25,5 +26,16 @@ public class main {
             System.out.println("Data Mahasiswa ke-" + (i+1));
             students[i].tampilInfo();
         }
+
+        for (int i = 0; i < students.length; i++) {
+            arrIPK[i] = students[i].ipk;
+        }
+
+        InfoMahasiswa info = new InfoMahasiswa();
+        System.out.println("Nilai IPK Rata-rata: " + info.averageIP(arrIPK));
+        System.out.println("Nilai IPK Tertinggi: " + info.ipkTertinggi(arrIPK));
+
+        sc03.close();
+        sc03line.close();
     }
 }
