@@ -25,5 +25,9 @@ public class Main {
         System.out.println("List Data Mahasiswa setelah di sorting Ascending berdasarkan IPK: ");
         list.selectionSort();
         list.tampil();
+
+        System.out.println("List Data Mahasiswa setelah di sorting Ascending berdasarkan IPK: ");
+        list.insertionSort();
+        list.tampil();
     }
 }
