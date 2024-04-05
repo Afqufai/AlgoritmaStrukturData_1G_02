@@ -31,6 +31,17 @@ public class PencarianBuku03 {
         }
         return posisi;
     }
+    
+    Buku03 FindBuku(int cari){
+        int pos = 0;
+        for (int i = 0; i < listBk.length; i++) {
+            if (listBk[i].kodeBuku == cari) {
+                pos = i;
+                break;
+            }
+        }
+        return listBk[pos];
+    }
 
     void Tampilposisi(int x, int pos){
         if (pos != -1) {
