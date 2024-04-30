@@ -19,6 +19,7 @@ public class QueueMain03 {
         Queue03 Q = new Queue03(n);
 
         int pilih = 1;
+        boolean overUnderFlow = false;
 
         do {
             menu();
@@ -27,14 +28,10 @@ public class QueueMain03 {
                 case 1:
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc03.nextInt();
-                    Q.Enqueue(dataMasuk);
+                    overUnderFlow = Q.Enqueue(dataMasuk);
                     break;
                 case 2:
-                    int dataKeluar = Q.Dequeue();
-                    if (dataKeluar != 0) {
-                        System.out.println("Data yang dikeluarkan: " + dataKeluar);
-                        break;
-                    }
+                    overUnderFlow = Q.Dequeue();
                     break;
                 case 3:
                     Q.print();
@@ -48,7 +45,7 @@ public class QueueMain03 {
                 default:
                     break;
             }
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih ==4 || pilih == 5);
+        } while (overUnderFlow == false);
 
         sc03.close();
     }
