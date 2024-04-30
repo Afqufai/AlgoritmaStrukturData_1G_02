@@ -8,6 +8,7 @@ public class QueueMain03 {
         System.out.println("2. Antrian keluar");
         System.out.println("3. Cek Antrian terdepan");
         System.out.println("4. Cek Semua antrian");
+        System.out.println("5. Cek Antrian paling belakang");
         System.out.println("------------------------------");
     }
 
@@ -52,6 +53,8 @@ public class QueueMain03 {
                 case 4:
                     antri.print();
                     break;
+                case 5:
+                    antri.peekRear();
                 default:
                     programOn = false;
             }
