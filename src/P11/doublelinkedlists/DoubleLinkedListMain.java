@@ -2,6 +2,7 @@ package P11.doublelinkedlists;
 
 public class DoubleLinkedListMain {
     public static void main(String[] args) throws Exception {
+        //Percobaan 1 + 3
         DoubleLinkedLists dll = new DoubleLinkedLists();
         dll.print();
         System.out.println("Size: " + dll.size());
@@ -16,6 +17,11 @@ public class DoubleLinkedListMain {
         dll.print();
         System.out.println("Size: " + dll.size());
         System.out.println("===========================================");
+        System.out.println("Data awal pada double linked list ini adalah: " + dll.getFirst());
+        System.out.println("Data terakhir pada linked list adalah: " + dll.getLast());
+        System.out.println("Data pada index ke-1 di linked list adalah: " + dll.get(1));
+
+        //Percobaan 1
         dll.clear();
         dll.print();
         System.out.println("Size: " + dll.size());
