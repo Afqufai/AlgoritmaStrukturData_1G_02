@@ -63,4 +63,25 @@ public class Graph03 {
         }
         System.out.println();
     }
+
+    void cekTetangga(int asal, int tujuan){
+        boolean found = false;
+        for (int index = 0; index < list[asal].size(); index++) {
+            try {
+                if (list[asal].get(index) == tujuan) {
+                    found = true;
+                    break;
+                }
+            } catch (Exception e) {
+                System.out.println("Uh oh.");
+            }
+        }
+        char asalC = (char) ('A' + asal);
+        char tujuC = (char) ('A' + tujuan);
+        if (found) {
+            System.out.println("Gedung " + asalC + " dan Gedung " + tujuC + " bertetangga!");
+        } else {
+            System.out.println("Gedung " + asalC + " dan Gedung " + tujuC + " TIDAK bertetangga!");
+        }
+    }
 }
